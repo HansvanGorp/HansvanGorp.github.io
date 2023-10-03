@@ -20,7 +20,7 @@ Lectures
 
 Online Material
 ======
-1. \[[Introduction to generative modeling](https://www.youtube.com/watch?v=s8o03UGp200)\]
-2. \[[VAE](https://www.youtube.com/watch?v=OM95kDPAW-M)\]
-3. \[[GAN](https://www.youtube.com/watch?v=QyQGevCAsr0)\]
-4. \[[Normalizing Flows](https://www.youtube.com/watch?v=yxVcnuRrKqQ)\]
+1. [Introduction to generative modeling](https://www.youtube.com/watch?v=s8o03UGp200)
+2. [VAE](https://www.youtube.com/watch?v=OM95kDPAW-M)
+3. [GAN](https://www.youtube.com/watch?v=QyQGevCAsr0)
+4. [Normalizing Flows](https://www.youtube.com/watch?v=yxVcnuRrKqQ)
