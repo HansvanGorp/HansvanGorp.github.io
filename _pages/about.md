@@ -14,13 +14,5 @@ Latest Publication
 ==================
 {% include base_path %}
 
-{% assign latestPublication = nil %}
-{% for post in site.publications %}
-  {% capture currentYear %}{{ post.date | date: "%Y" }}{% endcapture %}
-  {% capture latestYear %}{{ latestPublication.date | date: "%Y" }}{% endcapture %}
-  {% if currentYear > latestYear %}
-    {% assign latestPublication = post %}
-  {% endif %}
-{% endfor %}
-
-{% include archive-single.html post=latestPublication %}
+{% assign latestPublication = site.publications | first %}
+{% include archive-single.html %}
