@@ -11,30 +11,31 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Automatic Sleep Staging using Deep Generative Modeling, Eindhoven University of Technology and Philips Sleep and Respiratory Care, 2025 (expected)
+* MSc in Electrical Engineering, Eindhoven University of Technology, 2020
+  * End project: [Active deep probabilistic subsampling](https://hansvangorp.github.io/publication/2021-07-01)
+* BSc in Electrical Engineering, Eindhoven University of Technology, 2018
+  * End project: [Dose distribution as outcome predictor for gamma knife radiosurgery on vestibular schwannoma](https://hansvangorp.github.io/publication/2019-03-01)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* September 2020 - Present: Ph.D Candidate
+  * Eindhoven University of Technology, Department of Electrical Engineering, Signal Processing Systems, [BM/d Lab](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics-lab/)
+  * Philips Sleep and Respiratory Care, Eindhoven
+  * Project: Automatic Sleep Staging using Deep Generative Modeling
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* August 2019 - October 2019: Research Intern
+  * Philips Research, Eindhoven
+  * Project: Suppression of pump distortion for inflation-based noninvasive blood pressure measurement
   
-Skills
+Research areas
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Automatic sleep staging
+* Deep learning
+  * Deep generative models
+  * Deep learning for inverse problems
+  * Deep learning-enabled subsampling 
+* Signal Processing
 
 Publications
 ======
@@ -42,18 +43,17 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
 Teaching
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* September 2020 - Present: co-lecturer
+  * Eindhoven University of Technology
+  * Course: Machine Learning for Signal Processing
+
+* September 2016 - September 2020: Student Teaching Assistant
+  * Eindhoven University of Technology
+  * Courses: Computation, Calculus, Applied Physics
+
   
-Service and leadership
+Volunteering
 ======
-* Currently signed in to 43 different slack teams
+* Leader at Scouting Nederland for the 'welpen' (cub scouts), kids aged 7 trough 11
