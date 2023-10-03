@@ -14,5 +14,8 @@ Latest Publication
 ==================
 {% include base_path %}
 
-{% assign latestPublication = site.publications | first %}
-{% include archive-single.html %}
+{% for post in site.publications %}
+  {% if forloop.last %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
