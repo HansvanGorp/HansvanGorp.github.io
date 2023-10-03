@@ -12,3 +12,6 @@ I am currently a doctoral candidate affiliated with both the Signal Processing S
 
 Latest Publication
 ==================
+{% include base_path %}
+{% assign latestPublication = site.publications | first %}
+{% include archive-single.html post=latestPublication %}
