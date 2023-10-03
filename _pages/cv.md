@@ -47,7 +47,7 @@ Teaching
 ======
 * September 2020 - Present: co-lecturer
   * Eindhoven University of Technology
-  * Course: Machine Learning for Signal Processing
+  * Course: [Machine Learning for Signal Processing](https://hansvangorp.github.io/teaching/)
 
 * September 2016 - September 2020: Student Teaching Assistant
   * Eindhoven University of Technology
