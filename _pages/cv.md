@@ -8,17 +8,18 @@ redirect_from:
 ---
 
 {% include base_path %}
+$\\$
 
 Education
-======
-* Ph.D in Automatic Sleep Staging using Deep Generative Modeling, Eindhoven University of Technology and Philips Sleep and Respiratory Care, 2025 (expected)
+-----
+* Ph.D. in Automatic Sleep Staging using Deep Generative Modeling, Eindhoven University of Technology and Philips Sleep and Respiratory Care, 2025 (expected)
 * MSc in Electrical Engineering, Eindhoven University of Technology, 2020
   * End project: [Active deep probabilistic subsampling](https://hansvangorp.github.io/publication/2021-07-01)
 * BSc in Electrical Engineering, Eindhoven University of Technology, 2018
   * End project: [Dose distribution as outcome predictor for gamma knife radiosurgery on vestibular schwannoma](https://hansvangorp.github.io/publication/2019-03-01)
 
 Work experience
-======
+-----
 * September 2020 - Present: Ph.D Candidate
   * Eindhoven University of Technology, Department of Electrical Engineering, Signal Processing Systems, [BM/d Lab](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics-lab/)
   * Philips Sleep and Respiratory Care, Eindhoven
@@ -29,7 +30,7 @@ Work experience
   * Project: Suppression of pump distortion for inflation-based noninvasive blood pressure measurement
   
 Research areas
-======
+-----
 * Automatic sleep staging
 * Deep learning
   * Deep generative models
@@ -38,13 +39,13 @@ Research areas
 * Signal Processing
 
 Publications
-======
-  <ul>{% for post in site.publications %}
+-----
+  <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
 Teaching
-======
+-----
 * September 2020 - Present: co-lecturer
   * Eindhoven University of Technology
   * Course: [Machine Learning for Signal Processing](https://hansvangorp.github.io/teaching/)
@@ -55,5 +56,5 @@ Teaching
 
   
 Volunteering
-======
-* Leader at Scouting Nederland for the 'welpen' (cub scouts), kids aged 7 trough 11
+-----
+* Leader at Scouting Nederland for the 'welpen' (cub scouts), kids aged 7 through 11
