@@ -12,4 +12,6 @@ I am currently a doctoral candidate affiliated with both the Signal Processing S
 
 Publications
 ======
-Lorem Ipsum
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
