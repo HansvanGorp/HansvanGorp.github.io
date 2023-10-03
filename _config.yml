@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Hans van Gorp"
   avatar           : "hans-square.jpg"
-  bio              : "Ph.D. student, Electrical Engineering, Automatic Sleep Staging, Generative Deep Learning"
+  bio              : "Ph.D. student, Electrical Engineering, Automatic Sleep Staging, Signal Processing, Deep Generative Models"
   location         : "Eindhoven, The Netherlands"
   employer         : "TU/e, Philips"
   googlescholar    : "https://scholar.google.com/citations?user=S0kwrtQAAAAJ"
-  email            :
+  email            : "h.v.gorp@tue.nl"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
