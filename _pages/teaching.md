@@ -18,9 +18,9 @@ Lectures
 
 *Lecures are given by me.
 
-Online Lectures
+Online Material
 ======
-1. [![lecture 1](/images/500x300.png "lecture 1")](https://www.youtube.com/watch?v=s8o03UGp200&t=32s)
-2. 
-3. 
-4. 
+1. \[[Introduction to generative modeling](https://www.youtube.com/watch?v=s8o03UGp200)\]
+2. \[[VAE](https://www.youtube.com/watch?v=OM95kDPAW-M)\]
+3. \[[GAN](https://www.youtube.com/watch?v=QyQGevCAsr0)\]
+4. \[[Normalizing Flows](https://www.youtube.com/watch?v=yxVcnuRrKqQ)\]
