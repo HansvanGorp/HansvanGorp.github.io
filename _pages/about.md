@@ -13,5 +13,7 @@ I am currently a doctoral candidate affiliated with both the Signal Processing S
 Latest Publication
 ==================
 {% include base_path %}
-{% assign latestPublication = site.publications | first %}
-{% include archive-single.html post=latestPublication %}
+
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
