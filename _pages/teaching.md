@@ -1,11 +1,8 @@
 ---
-layout: archive-single
-title: "Teaching experience 1"
-type: "Undergraduate course"
 permalink: /teaching/
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+title: "Teaching"
+excerpt: "Teaching"
+author_profile: true
 ---
 
 This is a description of a teaching experience. You can use markdown like any other post.
