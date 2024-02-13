@@ -1,7 +1,6 @@
 ---
 permalink: /teaching/
 title: "Machine Learning for Signal Prcessing"
-excerpt: "Teaching"
 author_profile: true
 ---
 
