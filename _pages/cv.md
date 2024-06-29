@@ -19,10 +19,14 @@ Education
 
 Work experience
 -----
-* September 2020 - Present: Ph.D Candidate
+* September 2020 - Present: Ph.D. Candidate
   * Eindhoven University of Technology, Department of Electrical Engineering, Signal Processing Systems, [BM/d Lab](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics-lab/)
   * Philips Sleep and Respiratory Care, Eindhoven
   * Project: Automatic Sleep Staging using Deep Generative Modeling
+
+* July 2024 - November 2024: Ph.D. internship
+  * Qualcomm Research Netherlands
+  * Project: Global Navigation Satellite Systems
 
 * August 2019 - October 2019: Research Intern
   * Philips Research, Eindhoven
