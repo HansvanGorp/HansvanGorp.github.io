@@ -24,7 +24,7 @@ Work experience
   * Philips Sleep and Respiratory Care, Eindhoven
   * Project: Automatic Sleep Staging using Deep Generative Modeling
 
-* July 2024 - November 2024: Ph.D. internship
+* July 2024 - November 2024: Ph.D. Internship
   * Qualcomm Research Netherlands
   * Project: Global Navigation Satellite Systems
 
