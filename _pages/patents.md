@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Patent applications"
+title: "Patents"
 permalink: /patents/
 author_profile: true
 ---
