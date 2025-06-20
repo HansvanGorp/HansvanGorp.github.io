@@ -26,7 +26,7 @@ Work experience
 
 * July 2024 - November 2024: Ph.D. Internship
   * Qualcomm AI Research, Amsterdam
-  * Project: Global Navigation Satellite Systems
+  * Project: [Neural Augmented Kalman Filters for Road Network assisted GNSS positioning](https://hansvangorp.github.io/publication/2025-06-06)
 
 * August 2019 - October 2019: Research Intern
   * Philips Research, Eindhoven
