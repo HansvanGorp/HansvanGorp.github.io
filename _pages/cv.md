@@ -27,7 +27,7 @@ Work experience
   * Philips Sleep and Respiratory Care, Eindhoven
   * Project: [Deep generative modeling in sleep diagnostics](https://hansvangorp.github.io/publication/2026-01-22)
 
-* July 2024 - November 2024: Ph.D. Internship
+* July 2024 - November 2024: PhD Internship
   * Qualcomm AI Research, Amsterdam
   * Project: [Neural Augmented Kalman Filters for Road Network assisted GNSS positioning](https://hansvangorp.github.io/publication/2025-06-06)
 
