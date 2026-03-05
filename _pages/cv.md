@@ -11,18 +11,21 @@ redirect_from:
 
 Education
 -----
-* Ph.D. in Automatic Sleep Staging using Deep Generative Modeling, Eindhoven University of Technology and Philips Sleep and Respiratory Care, end of 2025 (expected)
+* PhD (cum laude) on deep generative modeling in sleep diagnostics, Eindhoven University of Technology and Philips Sleep and Respiratory Care, 2026
 * MSc in Electrical Engineering, Eindhoven University of Technology, 2020
-  * End project: [Active deep probabilistic subsampling](https://hansvangorp.github.io/publication/2021-07-01)
 * BSc in Electrical Engineering, Eindhoven University of Technology, 2018
-  * End project: [Dose distribution as outcome predictor for gamma knife radiosurgery on vestibular schwannoma](https://hansvangorp.github.io/publication/2019-03-01)
 
 Work experience
 -----
-* September 2020 - Present: Ph.D. Candidate
+* February 2026 - Present: Postdoctoral researcher
+  * Eindhoven University of Technology, Department of Electrical Engineering, [Signal Processing Systems](https://www.tue.nl/en/research/research-groups/signal-processing-systems/)
+  * NXP Semiconductors
+  * Project: Deep learning in automotive radar
+
+* September 2020 - January 2026: PhD (cum laude)
   * Eindhoven University of Technology, Department of Electrical Engineering, Signal Processing Systems, [BM/d Lab](https://www.tue.nl/en/research/research-groups/signal-processing-systems/biomedical-diagnostics-lab/)
   * Philips Sleep and Respiratory Care, Eindhoven
-  * Project: Automatic Sleep Staging using Deep Generative Modeling
+  * Project: [Deep generative modeling in sleep diagnostics](https://hansvangorp.github.io/publication/2026-01-22)
 
 * July 2024 - November 2024: Ph.D. Internship
   * Qualcomm AI Research, Amsterdam
