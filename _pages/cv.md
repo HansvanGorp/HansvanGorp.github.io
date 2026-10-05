@@ -13,12 +13,12 @@ redirect_from:
 <p class="cv-download"><a class="btn" href="{{ base_path }}/files/cv.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)</a></p>
 
 <div class="print-only cv-print-header">
-  <img class="cv-print-header__photo" src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name }}">
   <div>
     <p class="cv-print-header__name">{{ site.author.name }}</p>
     <p class="cv-print-header__role">{{ site.author.bio }} · {{ site.author.employer }}</p>
     <p class="cv-print-header__contact">{{ site.author.email }} · hansvangorp.github.io · {{ site.author.location }}</p>
   </div>
+  <img class="cv-print-header__photo" src="{{ base_path }}/images/profile-print.jpg" alt="{{ site.author.name }}">
 </div>
 
 Research areas

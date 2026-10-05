@@ -7,8 +7,15 @@
 @media print {
   @page {
     size: A4;
-    margin: 15mm 16mm 16mm;
+    /* no side margins: the content is padded instead (see .archive), so the
+       header band can span the full page width without overflowing */
+    margin: 15mm 0 16mm;
     background: $background-color; /* paints the page margins too */
+  }
+
+  /* page 1 starts with the full-width header band instead of a top margin */
+  @page :first {
+    margin-top: 0;
   }
 
   *,
@@ -63,6 +70,10 @@
     padding: 0 !important;
   }
 
+  .archive {
+    padding: 0 16mm !important;
+  }
+
   a,
   .archive a {
     color: $link-color !important;
@@ -99,11 +110,16 @@
     }
   }
 
+  /* header band: slightly lighter navy, bleeding into the side margins */
   .cv-print-header {
     display: flex !important;
     align-items: center;
+    justify-content: space-between; /* text flush left, photo on the right */
     gap: 6mm;
-    margin-bottom: 10mm;
+    margin: 0 -16mm 10mm;
+    padding: 12mm 16mm; /* equal top and bottom: photo is vertically centred */
+    background: $lighter-gray;
+    border-bottom: 0.5pt solid $gray; /* thin light grey line between header and body */
 
     p {
       margin: 0;

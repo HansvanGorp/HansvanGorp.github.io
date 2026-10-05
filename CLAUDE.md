@@ -67,6 +67,19 @@ Section headings with a thin gold rule are opt-in per page via `classes: ruled-h
 
 ## Generated assets (do not edit by hand)
 
+### Profile photos: `images/profile-*.jpg`
+
+`images/prof_pic_square.png` (1500×1500) is the original, and the only photo to edit or replace.
+`scripts/make_photos.py` derives the other two:
+
+| File | Size | Used by |
+|---|---|---|
+| `prof_pic_square.png` | 1500×1500 original | `scripts/make_cards.py` (site card) |
+| `profile-print.jpg` | 600×600, q92 | CV PDF header (`_pages/cv.md`) |
+| `profile-web.jpg` | 400×400, q85 | sidebar (`author.avatar` in `_config.yml`) |
+
+Never point pages at the original: it is 2 MB and made the CV PDF 4 MB.
+
 The GitHub Action `.github/workflows/generated-assets.yml` regenerates these on push and
 commits them:
 
@@ -87,14 +100,17 @@ Made by `scripts/make_cards.py` (1200×630 PNG, the Open Graph size LinkedIn use
   - a footer rule with `hansvangorp.github.io` in periwinkle;
   - the text block is vertically centered above the footer rule.
 
-**Reproducing them exactly.** The output is pixel-identical as long as these are unchanged:
+**Reproducing them exactly.** The output is pixel-identical on any OS as long as these are unchanged:
 - the font `scripts/fonts/Inter.ttf` (variable Inter from google/fonts, OFL licence, sha256
   checked by the script);
+- Pillow's basic text layout engine (`layout_engine=ImageFont.Layout.BASIC`). Without it,
+  Pillow uses libraqm when it is installed, as on GitHub's Linux runners, and glyphs shift;
 - the Pillow version pinned in `scripts/requirements.txt` (the script refuses to run with
   another version unless `--any-pillow`).
 
 ```
 pip install -r scripts/requirements.txt
+python scripts/make_photos.py       # derived profile photos (run first)
 python scripts/make_cards.py        # only rewrites cards whose pixels changed
 ```
 
@@ -105,7 +121,12 @@ papers are removed. To change the profile card text, edit `SITE_CARD` in the scr
 
 `scripts/cv-pdf.sh` prints http://localhost:4000/cv/ to PDF with headless Chrome, using the
 print styles. The PDF starts with a header that only appears in print (`.cv-print-header` in
-`_pages/cv.md`): round profile photo, name, role in gold, and contact line. It is currently 3 pages. The site must be served first, then run `bash scripts/cv-pdf.sh`. The CV page
+`_pages/cv.md`): name, role in gold and contact line flush left, round profile photo on
+the right, and a thin light grey line (0.5pt `$gray`) along the bottom of the band. It is currently 3 pages.
+The header is a full-width band in `$lighter-gray` (#13223A) on page 1 only (`@page :first`
+has no top margin). Pages have no side margins; `.archive` is padded 16mm instead, so the
+band can bleed to the edges without Chrome shrinking the page to fit. Band padding is equal
+top and bottom (12mm) so the photo is vertically centred. The site must be served first, then run `bash scripts/cv-pdf.sh`. The CV page
 links to it with the "Download CV (PDF)" button.
 
 ## Conventions

@@ -5,8 +5,8 @@
   images/cards/<permalink slug>.png      one per publication/patent, e.g.
                                          /publication/2026-08-13 -> publication-2026-08-13.png
 
-The output is pixel-for-pixel reproducible because the font file (sha256 checked)
-and the Pillow version are pinned. Run from the repository root:
+The output is pixel-for-pixel reproducible, on any OS, because the font file (sha256
+checked) and the Pillow version are pinned and text uses Pillow's basic layout engine. Run from the repository root:
 
   pip install -r scripts/requirements.txt
   python scripts/make_cards.py
@@ -53,7 +53,9 @@ OWN_NAME = 'van Gorp'  # author names containing this are drawn in bold white
 
 
 def font(size, weight):
-    f = ImageFont.truetype(FONT, size)
+    # Always use the basic layout engine: Pillow switches to libraqm when it is
+    # installed (e.g. on GitHub's Linux runners), which positions glyphs differently.
+    f = ImageFont.truetype(FONT, size, layout_engine=ImageFont.Layout.BASIC)
     f.set_variation_by_axes([32, weight])  # Inter axes: optical size, weight
     return f
 

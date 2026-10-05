@@ -80,7 +80,7 @@ analytics:
 # Site Author
 author:
   name             : "Hans van Gorp"
-  avatar           : "prof_pic_square.png"
+  avatar           : "profile-web.jpg" # derived from prof_pic_square.png by scripts/make_photos.py
   bio              : "Postdoctoral Researcher"
   location         : "Eindhoven, The Netherlands"
   employer         : "TU/e, NXP Semiconductors"
