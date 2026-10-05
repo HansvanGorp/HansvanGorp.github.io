@@ -48,7 +48,7 @@ jobs:
         run: bundle exec jekyll serve --config _config.yml,_config.dev.yml --detach
 
       - name: Render CV to PDF
-        run: scripts/cv-pdf.sh
+        run: bash scripts/cv-pdf.sh
 
       - name: Commit changes
         run: |
