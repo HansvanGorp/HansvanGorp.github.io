@@ -1,18 +1,140 @@
 /* ==========================================================================
    PRINT STYLES
-   ========================================================================== */
-
-/*
-   Hide the following elements on print
+   Used for printing and for generating files/cv.pdf (scripts/cv-pdf.sh):
+   an A4 document in the site's dark theme, without site navigation.
    ========================================================================== */
 
 @media print {
+  @page {
+    size: A4;
+    margin: 15mm 16mm 16mm;
+    background: $background-color; /* paints the page margins too */
+  }
+
+  *,
+  *:before,
+  *:after {
+    -webkit-animation: none !important;
+            animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    /* keep the dark backgrounds instead of the browser's ink-saving white */
+    -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+  }
+
+  html,
+  body {
+    color: $text-color !important;
+    background: $background-color !important;
+    font-size: 10pt;
+    /* drop the space the screen layout reserves for the sticky footer */
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* hide site chrome */
   .masthead,
+  .sidebar,
   .toc,
   .page__share,
   .page__related,
+  .page__footer,
   .ads,
-  .page__footer {
-    display: none;
+  .cv-download,
+  .archive > .page__title {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* content uses the full page width */
+  #main,
+  .archive,
+  .page {
+    float: none !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  a,
+  .archive a {
+    color: $link-color !important;
+    text-decoration: none !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: $heading-color !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    margin: 1.2em 0 0.5em;
+    padding-bottom: 0.2em;
+    font-size: 13pt;
+    border-bottom: 1.5px solid $highlight-color;
+  }
+
+  li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* short list of keywords: two columns, never split across pages */
+  .cv-research-areas {
+    columns: 2;
+    column-gap: 8mm;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    > li {
+      break-inside: avoid-column;
+    }
+  }
+
+  .cv-print-header {
+    display: flex !important;
+    align-items: center;
+    gap: 6mm;
+    margin-bottom: 10mm;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .cv-print-header__photo {
+    width: 28mm;
+    height: 28mm;
+    border-radius: 50%;
+    border: 1.5px solid $light-gray;
+    object-fit: cover;
+  }
+
+  .cv-print-header__name {
+    color: $heading-color;
+    font-size: 22pt;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .cv-print-header__role {
+    margin-top: 0.15em !important;
+    color: $highlight-color;
+    font-size: 11pt;
+    font-weight: 600;
+  }
+
+  .cv-print-header__contact {
+    margin-top: 0.3em !important;
+    color: $gray;
+    font-size: 9pt;
   }
 }

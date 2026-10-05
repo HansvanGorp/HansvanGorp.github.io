@@ -1,0 +1,6 @@
+{% include base_path %}
+
+<article class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+  <h3 class="pub__title" itemprop="headline"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h3>
+  {% include publication-meta.html pub=post %}
+</article>

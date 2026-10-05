@@ -167,10 +167,18 @@
   list-style-type: none;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  background: #fff;
+  background: $background-color;
   z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
+  box-shadow: 0 0 10px rgba(#000, 0.5);
   cursor: default;
+
+  /* icons use the text color instead of brand colors */
+  .fa,
+  .fas,
+  .fab,
+  .ai {
+    color: $text-color;
+  }
 
   @include breakpoint($large) {
     display: block;
@@ -208,7 +216,7 @@
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: #fff transparent;
+    border-color: $background-color transparent;
     z-index: 1;
 
     @include breakpoint($large) {

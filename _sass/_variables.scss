@@ -14,7 +14,7 @@ $indent-var                 : 1.3em;
 
 /* system typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$sans-serif                 : "Inter", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
@@ -47,20 +47,24 @@ $type-size-8                : 0.625em;  // ~10px
    Colors
    ========================================================================== */
 
-$gray                       : #7a8288;
+/* dark theme: main palette */
+$background-color           : #0A1628;
+$highlight-color            : #FFC000;
+$text-color                 : #CBD5E1;
+$heading-color              : #F1F5F9; // CV headings (page and PDF)
+
+$gray                       : #94A3B8; // muted text
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$light-gray                 : mix($text-color, $background-color, 25%); // borders
+$lighter-gray               : mix($text-color, $background-color, 6%);  // raised surfaces
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
+$body-color                 : $background-color;
+$code-background-color      : mix($text-color, $background-color, 4%);
 $code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$border-color               : mix($text-color, $background-color, 15%);
 
-$primary-color              : #7a8288;
+$primary-color              : $highlight-color;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
@@ -90,11 +94,11 @@ $xing-color                 : #006567;
 
 
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
+$link-color                 : #A5B4FC;
+$link-color-hover           : mix(#fff, $link-color, 40%);
+$link-color-visited         : $link-color;
+$masthead-link-color        : $text-color;
+$masthead-link-color-hover  : $highlight-color;
 
 
 /*

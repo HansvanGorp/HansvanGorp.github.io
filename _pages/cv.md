@@ -3,11 +3,35 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+classes: cv-page ruled-headings
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
+
+<p class="cv-download"><a class="btn" href="{{ base_path }}/files/cv.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)</a></p>
+
+<div class="print-only cv-print-header">
+  <img class="cv-print-header__photo" src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name }}">
+  <div>
+    <p class="cv-print-header__name">{{ site.author.name }}</p>
+    <p class="cv-print-header__role">{{ site.author.bio }} · {{ site.author.employer }}</p>
+    <p class="cv-print-header__contact">{{ site.author.email }} · hansvangorp.github.io · {{ site.author.location }}</p>
+  </div>
+</div>
+
+Research areas
+-----
+* Signal Processing
+* Deep learning
+* Deep generative models
+* Deep learning for inverse problems
+* Active Inference
+* Automatic sleep staging
+* FMCW radar processing
+* Ultrasound operator guidance
+{: .cv-research-areas}
 
 Education
 -----
@@ -34,32 +58,29 @@ Work experience
 * August 2019 - October 2019: Research Intern
   * Philips Research, Eindhoven
   * Project: Suppression of pump distortion for inflation-based noninvasive blood pressure measurement
-  
-Research areas
------
-* Signal Processing
-* Deep learning
-  * Deep generative models
-  * Deep learning for inverse problems
-  * Active Inference
-* Automatic sleep staging
 
-
-Patents
+Grants awarded
 -----
-  <ul>{% for post in site.patents reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* 2026: TTT-AI voucher
+  * Polaris: Operator Guidance for Carotid Ultrasound
 
 Publications
 -----
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+{% assign cv_pubs = site.publications | sort: "date" | reverse %}
+<ul class="cv-pubs">{% for post in cv_pubs %}{% include archive-single-cv.html %}{% endfor %}</ul>
+
+Patents
+-----
+{% assign cv_patents = site.patents | sort: "date" | reverse %}
+<ul class="cv-pubs">{% for post in cv_patents %}{% include archive-single-cv.html %}{% endfor %}</ul>
 
 Teaching
 -----
-* September 2020 - Present: co-lecturer
+* September 2026 - Present: Responsible lecturer
+  * Eindhoven University of Technology
+  * Course: [Machine Learning for Signal Processing](https://hansvangorp.github.io/teaching/)
+
+* September 2020 - September 2026: co-lecturer
   * Eindhoven University of Technology
   * Course: [Machine Learning for Signal Processing](https://hansvangorp.github.io/teaching/)
 
@@ -67,7 +88,6 @@ Teaching
   * Eindhoven University of Technology
   * Courses: Computation, Calculus, Applied Physics
 
-  
 Volunteering
 -----
 * Leader at Scouting Nederland for the 'welpen' (cub scouts), kids aged 7 through 11

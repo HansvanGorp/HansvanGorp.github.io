@@ -43,6 +43,14 @@
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
 
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   a + a {
     opacity: 0.5;
   }
@@ -243,3 +251,230 @@
     }
   }
 }
+
+
+/*
+   Publications and patents
+   ========================================================================== */
+
+.pub-year {
+  margin: 1.5em 0 0.75em;
+  padding-bottom: 0.25em;
+  font-size: $type-size-4;
+  border-bottom: 1px solid $border-color;
+}
+
+@media screen { /* the PDF is styled by _print.scss alone */
+  /* Section headings with a thin gold rule, opted into per page with
+     `classes: ruled-headings` (CV, Publications, Patents, Teaching; the PDF matches) */
+  .ruled-headings .archive h2,
+  .ruled-headings .page__content h2 {
+    margin: 1.75em 0 0.6em;
+    padding-bottom: 0.25em;
+    color: $heading-color;
+    font-size: $type-size-4;
+    border-bottom: 1.5px solid $highlight-color;
+  }
+}
+
+.pub {
+  margin-bottom: 1.75em;
+
+  p {
+    margin: 0 0 0.2em;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+}
+
+.pub__title {
+  margin: 0 0 0.3em;
+  font-size: $type-size-5;
+  line-height: 1.4;
+
+  a,
+  .archive & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.pub__authors {
+  color: $gray;
+
+  strong {
+    color: $text-color;
+    font-weight: 600;
+  }
+}
+
+.pub__venue {
+  color: $gray;
+}
+
+.pub .pub__links {
+  margin-top: 0.6em;
+}
+
+.pub__link,
+.archive a.pub__link,
+.page__content a.pub__link {
+  display: inline-block;
+  margin: 0 0.4em 0.3em 0;
+  padding: 0.15em 0.75em;
+  color: $text-color;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid $light-gray;
+  border-radius: 999px;
+
+  i {
+    margin-right: 0.25em;
+    font-size: 0.9em;
+  }
+
+  &:hover {
+    color: $background-color;
+    text-decoration: none;
+    background-color: $link-color;
+    border-color: $link-color;
+  }
+}
+
+/* header block on a publication's own page */
+.pub--page {
+  margin: 0.5em 0 1.5em;
+
+  p {
+    font-size: $type-size-5;
+  }
+
+  .pub__link {
+    font-size: 0.8em;
+  }
+}
+
+.pub__reference {
+  margin-top: 2em;
+  padding: 1em 1.25em;
+  background-color: $lighter-gray;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  p {
+    margin: 0;
+    color: $gray;
+    font-size: $type-size-6;
+  }
+}
+
+.pub__reference-title {
+  margin: 0 0 0.4em;
+  color: $text-color;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+
+/*
+   CV page
+   ========================================================================== */
+
+.cv-download {
+  margin: 0 0 1.5em;
+
+  /* outline button, matching the publication link pills */
+  a.btn {
+    color: $text-color !important;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid $light-gray !important;
+
+    &:hover {
+      color: $background-color !important;
+      background-color: $link-color;
+      border-color: $link-color !important;
+    }
+  }
+
+  .btn i {
+    margin-right: 0.4em;
+  }
+}
+
+.cv-pubs {
+  padding-left: 1.25em;
+}
+
+.cv-pub {
+  margin-bottom: 0.9em;
+  line-height: 1.45;
+}
+
+.cv-pub__title,
+.archive a.cv-pub__title {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cv-pub__meta {
+  display: block;
+  color: $gray;
+  font-size: $type-size-6;
+
+  strong {
+    color: $text-color;
+    font-weight: 600;
+  }
+}
+
+@media screen { /* the PDF is styled by _print.scss alone */
+  /* CV page on screen: the same compact document look as the PDF (_print.scss) */
+  .cv-page .archive {
+    font-size: 0.875em;
+    line-height: 1.55;
+
+    h2 {
+      font-size: 1.35em; /* rule and color come from .ruled-headings */
+    }
+
+    ul li {
+      margin-bottom: 0.3em;
+    }
+
+    li ul {
+      margin-top: 0.3em;
+    }
+
+    .cv-pub {
+      margin-bottom: 0.8em;
+    }
+  }
+}
+
+.cv-research-areas {
+  @include breakpoint($medium) {
+    columns: 2;
+    column-gap: 2em;
+  }
+
+  > li {
+    break-inside: avoid-column;
+  }
+}
+
+/* only shown when printing (e.g. the CV header) */
+.print-only {
+  display: none;
+}
+

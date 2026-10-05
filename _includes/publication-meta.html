@@ -1,0 +1,30 @@
+{% comment %}
+  Authors, venue/year and link buttons for a publication or patent.
+  Usage: {% include publication-meta.html pub=post %}
+{% endcomment %}
+{% include base_path %}
+{% assign pub = include.pub %}
+
+{% if pub.authors %}
+  {% assign authors = pub.authors
+     | replace: "Hans van Gorp", "<strong>Hans van Gorp</strong>"
+     | replace: "H. van Gorp", "<strong>H. van Gorp</strong>"
+     | replace: "H. Van Gorp", "<strong>H. Van Gorp</strong>" %}
+  <p class="pub__authors">{{ authors }}</p>
+{% endif %}
+
+<p class="pub__venue">{% if pub.venue and pub.venue != "" %}<i>{{ pub.venue }}</i>, {% endif %}{{ pub.date | date: "%Y" }}</p>
+
+{% if pub.paperurl or pub.pdfurl or pub.codeurl %}
+  <p class="pub__links">
+    {% if pub.paperurl %}
+      <a class="pub__link" href="{{ pub.paperurl }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Paper</a>
+    {% endif %}
+    {% if pub.pdfurl %}
+      <a class="pub__link" href="{% if pub.pdfurl contains '://' %}{{ pub.pdfurl }}{% else %}{{ base_path }}{{ pub.pdfurl }}{% endif %}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>
+    {% endif %}
+    {% if pub.codeurl %}
+      <a class="pub__link" href="{{ pub.codeurl }}"><i class="fas fa-code" aria-hidden="true"></i> Code</a>
+    {% endif %}
+  </p>
+{% endif %}

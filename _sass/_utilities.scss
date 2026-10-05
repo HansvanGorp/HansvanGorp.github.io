@@ -183,7 +183,7 @@ body:hover .visually-hidden button {
 
 .social-icons {
   .fa {
-    color: #000;
+    color: $text-color;
   }
 
   .fa-behance,
@@ -293,7 +293,7 @@ body:hover .visually-hidden button {
   position: relative;
   width: $navicon-width;
   height: $navicon-height;
-  background: #fff;
+  background: $background-color;
   margin: auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -305,7 +305,7 @@ body:hover .visually-hidden button {
     left: 0;
     width: $navicon-width;
     height: $navicon-height;
-    background: #fff;
+    background: $background-color;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -411,7 +411,7 @@ body:hover .visually-hidden button {
   margin-top: -150px;
   min-height: 0;
   z-index: 9999;
-  background: #fff;
+  background: $background-color;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
