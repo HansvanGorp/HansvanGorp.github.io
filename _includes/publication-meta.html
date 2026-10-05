@@ -18,7 +18,7 @@
 {% if pub.paperurl or pub.pdfurl or pub.codeurl %}
   <p class="pub__links">
     {% if pub.paperurl %}
-      <a class="pub__link" href="{{ pub.paperurl }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Paper</a>
+      <a class="pub__link" href="{{ pub.paperurl }}"><i class="fas fa-external-link-alt" aria-hidden="true"></i> {% if pub.collection == "patents" %}Patent{% else %}Paper{% endif %}</a>
     {% endif %}
     {% if pub.pdfurl %}
       <a class="pub__link" href="{% if pub.pdfurl contains '://' %}{{ pub.pdfurl }}{% else %}{{ base_path }}{{ pub.pdfurl }}{% endif %}"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>
