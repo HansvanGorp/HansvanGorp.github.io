@@ -6,7 +6,7 @@ author_profile: true
 classes: ruled-headings
 ---
 
-These are granted patents. You can also find them on <a href="https://scholar.google.com/citations?user=S0kwrtQAAAAJ">my Google Scholar profile</a>.
+You can find all my granted patents on <a href="https://scholar.google.com/citations?user=S0kwrtQAAAAJ">my Google Scholar profile</a>.
 
 {% include base_path %}
 
