@@ -23,11 +23,11 @@ redirect_from:
 
 Research areas
 -----
-* Signal Processing
+* Signal processing
 * Deep learning
 * Deep generative models
 * Deep learning for inverse problems
-* Active Inference
+* Active inference
 * Automatic sleep staging
 * FMCW radar processing
 * Ultrasound operator guidance
