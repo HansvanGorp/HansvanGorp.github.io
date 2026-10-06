@@ -95,7 +95,7 @@
 
 .author__content {
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle; /* level with the small photo on narrow screens */
   padding-left: 15px;
   padding-right: 25px;
   line-height: 1;
@@ -110,8 +110,11 @@
 
 .author__name {
   margin: 0;
+  /* on narrow screens the masthead already shows the name right above this strip */
+  display: none;
 
   @include breakpoint($large) {
+    display: block;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -224,8 +227,16 @@
     }
   }
 
+  /* wrap long items (location, employer) inside the narrow sidebar column instead
+     of overflowing into the page; wrapped lines align with the text, not the icon */
   li {
-    white-space: nowrap;
+    padding-left: 1.6em;
+    text-indent: -1.6em;
+
+    /* wide screens have room in the gutter: keep each item on one line */
+    @include breakpoint($x-large) {
+      white-space: nowrap;
+    }
   }
 
   a {
