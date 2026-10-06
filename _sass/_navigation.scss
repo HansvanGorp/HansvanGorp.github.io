@@ -196,9 +196,15 @@
     padding: 0 0.5rem;
     border: 0;
     outline: none;
-    background-color: $primary-color;
-    color: $background-color;
+    background-color: transparent; /* quiet menu icon: no gold block */
+    color: $text-color;
     cursor: pointer;
+
+    &:hover .navicon,
+    &:hover .navicon:before,
+    &:hover .navicon:after {
+      background: $heading-color;
+    }
   }
 
   .visible-links {
